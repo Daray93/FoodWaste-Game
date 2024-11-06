@@ -33,7 +33,7 @@ body {
 }
 
 #recycle-bin {
-  background-image: url('/trash-bin-with-cover-black.svg'); /* Path to recycling image */
+  background-image: url('https://raw.githubusercontent.com/Daray93/FoodWaste-Game/refs/heads/main/trash-bin-with-cover-black.svg'); /* Path to recycling image */
 }
 
 #trash-bin {
