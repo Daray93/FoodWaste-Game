@@ -29,15 +29,15 @@ body {
 
 /* Specific bin images */
 #compost-bin {
-  background-image: url(''); /* Path to compost image */
+  background-image: url('trash-bin-with-cover-brown.com.svg'); /* Path to compost image */
 }
 
 #recycle-bin {
-  background-image: url(''); /* Path to recycling image */
+  background-image: url('trash-bin-with-cover-black.svg'); /* Path to recycling image */
 }
 
 #trash-bin {
-  background-image: url(''); /* Path to trash image */
+  background-image: url('trash-bin-with-cover-green.svg'); /* Path to trash image */
 }
 
 .bin span {
