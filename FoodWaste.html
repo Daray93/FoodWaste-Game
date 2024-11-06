@@ -3,27 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Waste Recycling Game</title>
+  <title>How well can you sort waste?</title>
   <link rel="stylesheet" href="FoodWaste.css">
 </head>
 <body>
-  <h1>Food Waste Recycling Game</h1>
+  <h1>How well can you sort waste?</h1>
   <p>Drag the items into the correct bin:</p>
   
-  <div id="score">Score: 0</div>
+  <div id="score">Score: 0 Correct, 0 Wrong</div>
 
   <div class="bins">
-    <div class="bin" id="compost-bin">Compost</div>
-    <div class="bin" id="recycle-bin">Recycle</div>
-    <div class="bin" id="trash-bin">Trash</div>
+    <div class="bin" id="compost-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <span>Compost</span>
+    </div>
+    <div class="bin" id="recycle-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <span>Recycle</span>
+    </div>
+    <div class="bin" id="trash-bin" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <span>Trash</span>
+    </div>
   </div>
 
   <div class="items">
-    <div class="item" draggable="true" data-type="compost">🍌 Banana Peel</div>
-    <div class="item" draggable="true" data-type="recycle">🥫 Can</div>
-    <div class="item" draggable="true" data-type="trash">🧃 Juice Box</div>
-    <div class="item" draggable="true" data-type="compost">🍎 Apple Core</div>
-    <div class="item" draggable="true" data-type="recycle">📄 Paper</div>
+    <!-- Add 20 items here -->
+    <div class="item" id="item1" draggable="true" data-type="compost" ondragstart="drag(event)">🍌</div>
+    <div class="item" id="item2" draggable="true" data-type="recycle" ondragstart="drag(event)">🥫</div>
+    <div class="item" id="item3" draggable="true" data-type="trash" ondragstart="drag(event)">🧃</div>
+    <div class="item" id="item4" draggable="true" data-type="compost" ondragstart="drag(event)">🍎</div>
+    <div class="item" id="item5" draggable="true" data-type="recycle" ondragstart="drag(event)">📄</div>
+    <div class="item" id="item6" draggable="true" data-type="compost" ondragstart="drag(event)">🍊</div>
+    <div class="item" id="item7" draggable="true" data-type="trash" ondragstart="drag(event)">🥤</div>
+    <div class="item" id="item8" draggable="true" data-type="recycle" ondragstart="drag(event)">📰</div>
+    <div class="item" id="item9" draggable="true" data-type="compost" ondragstart="drag(event)">🌽</div>
+    <div class="item" id="item11" draggable="true" data-type="trash" ondragstart="drag(event)">🍔</div>
+    <div class="item" id="item12" draggable="true" data-type="compost" ondragstart="drag(event)">🍒</div>
+    <div class="item" id="item13" draggable="true" data-type="trash" ondragstart="drag(event)">🍪</div>
+    <div class="item" id="item14" draggable="true" data-type="recycle" ondragstart="drag(event)">📦</div>
+    <div class="item" id="item15" draggable="true" data-type="compost" ondragstart="drag(event)">🍓</div>
+    <div class="item" id="item16" draggable="true" data-type="trash" ondragstart="drag(event)">💡</div>
+    <div class="item" id="item17" draggable="true" data-type="recycle" ondragstart="drag(event)">🔋</div>
+    <div class="item" id="item18" draggable="true" data-type="compost" ondragstart="drag(event)">🥕</div>
+    <div class="item" id="item20" draggable="true" data-type="recycle" ondragstart="drag(event)">🖋️</div>
+    <div class="item" id="item21" draggable="true" data-type="trash" ondragstart="drag(event)">🧻</div>
+    <div class="item" id="item22" draggable="true" data-type="trash" ondragstart="drag(event)">🍬</div>
+
+  </div>
+
+  <!-- Correct Modal -->
+  <div id="congratulations-modal" style="display: none;">
+    <div>
+      <h2>Congratulations!</h2>
+      <p>You did it! Now try to better your first quiz.</p>
+      <a href="nextpage.html"><button>Next</button></a> <!-- Link to next page -->
+    </div>
+  </div>
+
+  <!-- Wrong Modal -->
+  <div id="wrong-modal" style="display: none;">
+    <div>
+      <span class="close-btn" onclick="closeWrongModal()">×</span> <!-- Close X button -->
+      <h2>Oops!</h2>
+      <p>You made some wrong choices. Try again!</p>
+    </div>
   </div>
 
   <script src="FoodWaste.js"></script>
