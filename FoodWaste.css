@@ -51,7 +51,7 @@ body {
 }
 
 /* Hover effect for bins */
-.bin:hover {
+.bin: hover {
   opacity: 0.8;
 }
 
@@ -82,7 +82,7 @@ body {
   border: 1px solid #000000;
   border-radius: 10px;
   cursor: grab;
-  background-color: #4f3167;
+  background-color: #f6682a;
   font-size: 50px;
   display: inline-block;
 }
