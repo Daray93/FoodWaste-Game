@@ -5,6 +5,8 @@ body {
   background-color: #e7d8d4;
 }
 
+h1 { margin-top: 2em;}
+
 .bins {
   display: flex;
   justify-content: center;
