@@ -37,7 +37,7 @@ body {
 }
 
 #trash-bin {
-  background-image: url('/trash-bin-with-cover-green.svg'); /* Path to trash image */
+  background-image: url('http://www.w3.org/2000/svg'); /* Path to trash image */
 }
 
 .bin span {
