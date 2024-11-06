@@ -29,7 +29,7 @@ body {
 
 /* Specific bin images */
 #compost-bin {
-  background-image: url('/trash-bin-with-cover-brown.com.svg'); /* Path to compost image */
+  background-image: url('./trash-bin-with-cover-brown.com.svg'); /* Path to compost image */
 }
 
 #recycle-bin {
